@@ -1,0 +1,548 @@
+*,
+html {
+  padding: 0%;
+  margin: 0%;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+* .row,
+* .col,
+html .row,
+html .col {
+  padding: 0%;
+  margin: 0%;
+  height: auto;
+}
+* .row .head,
+* .col .head,
+html .row .head,
+html .col .head {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  padding-top: 1%;
+  justify-content: space-between;
+}
+* .row .head .logo,
+* .col .head .logo,
+html .row .head .logo,
+html .col .head .logo {
+  width: 50%;
+}
+* .row .head .logo img,
+* .col .head .logo img,
+html .row .head .logo img,
+html .col .head .logo img {
+  width: 150px;
+  height: 25px;
+  margin-left: 5%;
+}
+* .row .head .icons,
+* .col .head .icons,
+html .row .head .icons,
+html .col .head .icons {
+  width: 40%;
+  color: #868383;
+}
+* .row .head .icons .date span,
+* .col .head .icons .date span,
+html .row .head .icons .date span,
+html .col .head .icons .date span {
+  margin-top: 3%;
+  font-size: 20px;
+}
+* .row .head .icons .but .btn,
+* .col .head .icons .but .btn,
+html .row .head .icons .but .btn,
+html .col .head .icons .but .btn {
+  background-color: transparent;
+  border: none;
+  color: #bbb8b8;
+  border-radius: 100%;
+  font-size: 25px;
+  margin-top: -5%;
+  cursor: pointer;
+}
+* .row .head .icons .but .btn:hover,
+* .col .head .icons .but .btn:hover,
+html .row .head .icons .but .btn:hover,
+html .col .head .icons .but .btn:hover {
+  background-color: #f5f1f1;
+}
+* .row .head .icons .extreme,
+* .col .head .icons .extreme,
+html .row .head .icons .extreme,
+html .col .head .icons .extreme {
+  margin-left: 10%;
+  width: 10%;
+  color: #868383;
+}
+* .row .head .icons .extreme .btn,
+* .col .head .icons .extreme .btn,
+html .row .head .icons .extreme .btn,
+html .col .head .icons .extreme .btn {
+  background-color: transparent;
+  border: none;
+  color: #bbb8b8;
+  border-radius: 100%;
+  font-size: 25px;
+  margin-top: -20%;
+  cursor: pointer;
+}
+* .row .head .icons .extreme .title,
+* .col .head .icons .extreme .title,
+html .row .head .icons .extreme .title,
+html .col .head .icons .extreme .title {
+  margin-left: 5%;
+  margin-top: 4%;
+}
+* .row .head .icons .extreme .title img,
+* .col .head .icons .extreme .title img,
+html .row .head .icons .extreme .title img,
+html .col .head .icons .extreme .title img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+* .row .head #supprt,
+* .col .head #supprt,
+html .row .head #supprt,
+html .col .head #supprt {
+  width: 15%;
+  display: none;
+  text-align: left;
+  background-color: #f1f1f1;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px #6b6de9;
+  position: absolute;
+  z-index: 1;
+  margin-top: 3%;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+* .row .head #supprt .links,
+* .col .head #supprt .links,
+html .row .head #supprt .links,
+html .col .head #supprt .links {
+  padding: 2px 9px;
+}
+* .row .head #supprt .links a,
+* .col .head #supprt .links a,
+html .row .head #supprt .links a,
+html .col .head #supprt .links a {
+  text-decoration: none;
+  color: #242424;
+}
+* .row .head .links:hover,
+* .col .head .links:hover,
+html .row .head .links:hover,
+html .col .head .links:hover {
+  background-color: #ddd;
+}
+* .row .content,
+* .col .content,
+html .row .content,
+html .col .content {
+  width: 100%;
+  padding: 0%;
+  margin-top: 2%;
+}
+* .row .content .text,
+* .col .content .text,
+html .row .content .text,
+html .col .content .text {
+  width: 50%;
+  line-height: 40%;
+  display: block;
+  margin: 5%;
+}
+* .row .content .text .bigText,
+* .col .content .text .bigText,
+html .row .content .text .bigText,
+html .col .content .text .bigText {
+  color: black;
+}
+* .row .content .text .smallText,
+* .col .content .text .smallText,
+html .row .content .text .smallText,
+html .col .content .text .smallText {
+  color: #717171;
+}
+* .row .content .text .buttons,
+* .col .content .text .buttons,
+html .row .content .text .buttons,
+html .col .content .text .buttons {
+  margin-top: 15%;
+}
+* .row .content .text .buttons .dropbtn,
+* .col .content .text .buttons .dropbtn,
+html .row .content .text .buttons .dropbtn,
+html .col .content .text .buttons .dropbtn {
+  height: 54px;
+  position: relative;
+}
+* .row .content .text .buttons .enter .input,
+* .col .content .text .buttons .enter .input,
+html .row .content .text .buttons .enter .input,
+html .col .content .text .buttons .enter .input {
+  border-color: #b9b4b4;
+  color: #717171;
+}
+* .row .content .text .buttons .enter .form-control-lg,
+* .col .content .text .buttons .enter .form-control-lg,
+html .row .content .text .buttons .enter .form-control-lg,
+html .col .content .text .buttons .enter .form-control-lg {
+  height: 55px;
+}
+* .row .content .text .empty,
+* .col .content .text .empty,
+html .row .content .text .empty,
+html .col .content .text .empty {
+  border-top: 1px solid #dad7d7;
+  margin-top: 2%;
+}
+* .row .content #pick,
+* .col .content #pick,
+html .row .content #pick,
+html .col .content #pick {
+  width: 20%;
+  display: none;
+  text-align: left;
+  background-color: #f1f1f1;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px #6b6de9;
+  position: absolute;
+  z-index: 1;
+  margin-top: 1%;
+  border-radius: 10px;
+}
+* .row .content #pick button,
+* .col .content #pick button,
+html .row .content #pick button,
+html .col .content #pick button {
+  color: #717171;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border: none;
+}
+* .row .content #pick button a,
+* .col .content #pick button a,
+html .row .content #pick button a,
+html .col .content #pick button a {
+  color: #717171;
+  text-decoration: none;
+}
+* .row .content #pick button:hover,
+* .col .content #pick button:hover,
+html .row .content #pick button:hover,
+html .col .content #pick button:hover {
+  background-color: #ddd;
+}
+* .row .content .modal-header,
+* .col .content .modal-header,
+html .row .content .modal-header,
+html .col .content .modal-header {
+  border-bottom: none;
+}
+* .row .content .modal-content,
+* .col .content .modal-content,
+html .row .content .modal-content,
+html .col .content .modal-content {
+  line-height: 100%;
+}
+* .row .content .modal-content .modal-body .linkSpace,
+* .col .content .modal-content .modal-body .linkSpace,
+html .row .content .modal-content .modal-body .linkSpace,
+html .col .content .modal-content .modal-body .linkSpace {
+  text-align: center;
+  color: #979494;
+  width: 90%;
+  height: 40px;
+  margin-top: 2%;
+  background-color: #e7e2e2;
+  border-radius: 5px;
+}
+* .row .content .modal-content .modal-body .btnCopy,
+* .col .content .modal-content .modal-body .btnCopy,
+html .row .content .modal-content .modal-body .btnCopy,
+html .col .content .modal-content .modal-body .btnCopy {
+  border: none;
+  height: 40px;
+  width: 40px;
+}
+* .row .content .modal-content .modal-body .btnCopy .copy,
+* .col .content .modal-content .modal-body .btnCopy .copy,
+html .row .content .modal-content .modal-body .btnCopy .copy,
+html .col .content .modal-content .modal-body .btnCopy .copy {
+  font-size: 25px;
+  color: #d1c6c6;
+}
+* .row .content .modal-content .modal-body .btnCopy:hover,
+* .col .content .modal-content .modal-body .btnCopy:hover,
+html .row .content .modal-content .modal-body .btnCopy:hover,
+html .col .content .modal-content .modal-body .btnCopy:hover {
+  border: none;
+  border-radius: 100%;
+  background-color: #f3eaea;
+}
+* .row .content .modal-content .empty,
+* .col .content .modal-content .empty,
+html .row .content .modal-content .empty,
+html .col .content .modal-content .empty {
+  border-top: 1px solid #c4c2c2;
+  margin-top: 3%;
+  width: 100%;
+}
+* .row .content .image,
+* .col .content .image,
+html .row .content .image,
+html .col .content .image {
+  width: 50%;
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* Caption text */
+  /* The dots/bullets/indicators */
+}
+* .row .content .image .slideshow-container,
+* .col .content .image .slideshow-container,
+html .row .content .image .slideshow-container,
+html .col .content .image .slideshow-container {
+  width: 50%;
+  position: relative;
+  margin: auto;
+  /* Hide the images by default */
+}
+* .row .content .image .slideshow-container .mySlides,
+* .col .content .image .slideshow-container .mySlides,
+html .row .content .image .slideshow-container .mySlides,
+html .col .content .image .slideshow-container .mySlides {
+  display: none;
+}
+* .row .content .image .prev, * .row .content .image .next,
+* .col .content .image .prev,
+* .col .content .image .next,
+html .row .content .image .prev,
+html .row .content .image .next,
+html .col .content .image .prev,
+html .col .content .image .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: 8%;
+  margin-top: -40px;
+  margin-left: 7%;
+  padding: 16px;
+  color: #0f0f0f;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration: none;
+}
+* .row .content .image .next,
+* .col .content .image .next,
+html .row .content .image .next,
+html .col .content .image .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+* .row .content .image .txt,
+* .col .content .image .txt,
+html .row .content .image .txt,
+html .col .content .image .txt {
+  color: #0c0303;
+  font-size: 8px;
+  width: 100%;
+  line-height: 20px;
+  text-align: center;
+}
+* .row .content .image .dot,
+* .col .content .image .dot,
+html .row .content .image .dot,
+html .col .content .image .dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+* .row .content .image .active,
+* .col .content .image .active,
+html .row .content .image .active,
+html .col .content .image .active {
+  background-color: #0e0af7;
+}
+* .row .content .image .dot:hover,
+* .col .content .image .dot:hover,
+html .row .content .image .dot:hover,
+html .col .content .image .dot:hover {
+  background-color: #474749;
+}
+* .row .mod2 .modal-header,
+* .col .mod2 .modal-header,
+html .row .mod2 .modal-header,
+html .col .mod2 .modal-header {
+  background-color: #1a3b1a;
+  color: white;
+}
+* .row .mod2 .modal-content,
+* .col .mod2 .modal-content,
+html .row .mod2 .modal-content,
+html .col .mod2 .modal-content {
+  line-height: 100%;
+  text-align: left;
+  color: #bbb;
+}
+* .row .mod2 .modal-content .modal-body #holder,
+* .col .mod2 .modal-content .modal-body #holder,
+html .row .mod2 .modal-content .modal-body #holder,
+html .col .mod2 .modal-content .modal-body #holder {
+  border: none;
+  color: #bebaba;
+}
+* .row .mod2 .modal-content .modal-body .include,
+* .col .mod2 .modal-content .modal-body .include,
+html .row .mod2 .modal-content .modal-body .include,
+html .col .mod2 .modal-content .modal-body .include {
+  width: 100%;
+  border: none;
+  padding: 2px 5px;
+  margin-bottom: 2%;
+}
+* .row .mod2 .modal-content .modal-body textarea,
+* .col .mod2 .modal-content .modal-body textarea,
+html .row .mod2 .modal-content .modal-body textarea,
+html .col .mod2 .modal-content .modal-body textarea {
+  background-color: #fdfcfc;
+}
+* .row .mod2 .modal-footer .btn:hover,
+* .col .mod2 .modal-footer .btn:hover,
+html .row .mod2 .modal-footer .btn:hover,
+html .col .mod2 .modal-footer .btn:hover {
+  background-color: #eeecec;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #3498db;
+}
+body .main {
+  /* Add animation to "page content" */
+}
+body .main header .btn {
+  margin-left: 70%;
+  padding: 5px 16px;
+  border-radius: 20px;
+}
+body .main header .btn i {
+  color: white;
+}
+body .main video {
+  width: 375px;
+  height: 500px;
+}
+body .main video #videoContainer {
+  width: 1280px;
+  height: 720px;
+  margin: 0 px auto;
+  border: 10px #333 solid;
+}
+body .main video #videoContainer .videoElement {
+  background-color: #666;
+  width: 1280px;
+  height: 720px;
+}
+body .main #loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  margin: -76px 0 0 -76px;
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body .main .animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: 10px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatebottom {
+  from {
+    bottom: 10px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+body .main #meeting {
+  display: none;
+  text-align: center;
+}
+body .main .down {
+  justify-content: space-between;
+}
+body .main .down .current span {
+  color: white;
+}
+body .main .down .calls .btn {
+  background-color: #474749;
+  border-radius: 100%;
+  padding: 5px 16px;
+}
+body .main .down .calls .btn i {
+  color: white;
+}
+body .main .down .calls .drop {
+  border-radius: 20px;
+  padding: 5px 30px;
+}
+body .main .down .inform .btn {
+  background-color: #474749;
+  border-radius: 100%;
+  padding: 5px 16px;
+}
+body .main .down .inform .btn i {
+  color: white;
+}
+
+/*# sourceMappingURL=meet.css.map */

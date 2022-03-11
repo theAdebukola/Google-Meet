@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./meet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <title>GoogleMeet</title>
+</head>
+<body>
+   <div class="row">
+       <div class="col">
+<!-- for the heading -->
+        <header>
+            <div class="head">
+                <div class="logo">
+                    <img src="./images/google meet logo2.png" alt="">
+                </div>
+               <div class="icons d-flex">
+                <div class="date">
+                    <span id="display2"></span>
+                    <span id="display"></span>
+                </div>
+                <div class="but">
+                    <button class="btn" onclick="handleSupport()"><i class="fa fa-question-circle-o support"></i></button>
+                    <button class="btn" onclick="handleFeedback('feedback')" class="feed"><i class="fa fa-exclamation-circle"></i></button>
+                    <button class="btn"><i class="fa fa-cog"></i></button>
+                </div>
+                <div id="supprt" class="supprtContent">
+                    <div class="links"><a href="https://support.google.com/meet/?hl=en#topic=7306097">Help</a></div>
+                    <div class="links"> <a href="https://policies.google.com/terms?hl=en">Terms of Services</a></div>
+                    <div class="links"><a href="https://policies.google.com/privacy?hl=en">Privacy Policy</a></div>
+                    <div class="links"><a href="">Terms summary</a></div>
+                  </div>
+                <div class="extreme d-flex">
+                <button class="btn"><i class="fa fa-th"></i></button>
+                <div class="title">
+                    <img src="./images/people on laptop.svg" alt="">
+                </div>
+               </div>
+            </div>
+        </header>
+              
+<!-- the main content-->
+       <div class="row">
+           <div class="col-sm column is-four-fifths">
+            <div class="content d-flex">
+                <div class="text">
+                    <div class="bigText">
+                        <h1> Premium video meetings.</h1>
+                        <h1>Now free for everyone.</h1>  
+                    </div>
+                    <div class="smallText">
+                        <p class="mt-4 text-secondary">we re-engineered the service we built for secure business</p>
+                        <p class="text-secondary">meetings, Google Meet, to make it free and available for all.</p> 
+                    </div>
+<!-- for new meeting list -->
+                    <div class="buttons d-flex">
+                        <div class="dropdown">
+                            <button onclick="handleList()" class="btn btn-primary dropbtn">
+                                <i class="fa fa-video-camera"></i>
+                                New Meeting
+                            </button> 
+                        </div>
+<!-- for create meeting link -->
+                        <div id="pick">
+                           <button onclick="popModal('modal')"><i class="pop fa fa-dot-circle-o"></i>Create a meeting for later</button>
+                           <button onclick="document.location='video.html'"><i class="fa fa-plus"></i>Start an instant meeting</a></button>
+                           <button><a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en&pli=1"><i class="fa fa-calendar-o"></i>Schedule in Google Calendar</a></button>
+                        </div>
+                        <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">
+                                            Here's the link to your meeting
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      </div>
+                                      <div class="modal-body">
+                                       Copy this link and send it to people you want to <br>
+                                       meet with. Be sure to save it so you can use it later too.
+<!-- for handling link and copying of meeting link  -->
+                                       <div class="d-flex">
+                                        <div id="link" class="linkSpace"></div>
+                                       <button class="btnCopy mt-2" onclick="handleCopy()">
+                                        <i class="fa fa-clone copy ml-1 mt-2"></i>
+                                       </button>
+                                       </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="enter">
+                            <input class="form-control-lg form-group ml-3 input" id="input" type="text" placeholder="&#xf11c; Enter a code or link"> 
+                        </div>
+                    </div>
+                    <div class="empty">
+                        <p class="mt-4 text-secondary" > <a href="https://support.google.com/meet/?hl=en&authuser=0#topic=7306097">Learn more</a> about Google Meet</p>
+                    </div>
+                </div> 
+              
+                <div class="image">
+                    <div class="slideshow-container">
+     <!-- first slide -->
+                        <div class="mySlides">
+                            <img src="./images/linklight.svg" alt="">
+                            <div class="txt">
+                                <h5>Get a link you can share</h5>
+                                <p>
+                                    Click <b>New meeting</b> to get a link you can send to
+                                      people you want to meet with
+                               </p> 
+                            </div>
+                        </div>
+    <!-- second slide -->
+                        <div class="mySlides">
+                            <img src="./images/people on laptop.svg" alt="">
+                            <div class="txt">
+                            <h5>See everyone together</h5>
+                            <p>
+                                To see more people at the same time, go to change
+                                layout in the More options menu
+                            </p>
+                            </div>
+                        </div>
+    <!-- third slide -->
+                        <div class="mySlides">
+                            <img src="./images/safety.svg" alt="">
+                            <div class="txt">
+                                <h5>Your meeting is safe</h5>
+                                <p>
+                                   No one can join a meeting unless invited or
+                                   admitted by the host
+                               </p>
+                            </div>
+                        </div>
+     <!-- fourth slide -->
+                        <div class="mySlides">
+                            <img src="./images/schedule.svg" alt="">
+                            <div class="txt">
+                                <h5>Plan ahead</h5>
+                                <p>
+                                    Click <b>New meeting</b> to schedule meetings in Google
+                                     Calendar and send invites to participants
+                               </p>
+                            </div>
+                        </div>
+                        </div>
+    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  
+                  <br>
+    <!-- The dots/circles -->
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                  </div>
+                </div>
+                
+           </div>
+          
+       </div>
+       </div>
+       <div id="feedback" class="modal hide fade mod2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Send feedback
+                    </h5>
+                  </div>
+                  <div class="modal-body">
+                    <textarea name="" id="holder" cols="50" rows="10">
+                    Have feedback? We'd love to hear it, but please don't share sensitive information.Have questions? try help or support
+                   </textarea>
+                   <div class="include">
+                        <input class="mt-3" type="checkbox" name="" id="check">
+                        <span class="mt-3">Include screenshot</span>
+                    </div>
+                   <p class="tt">
+                       Some <a href="">account and system information</a> may be sent to <br>
+                       Google. We will use it ti fix problems and improve our <br>
+                       services, subject to our <a href="https://policies.google.com/privacy?hl=en">Privacy Policy</a> and <a href="https://policies.google.com/u/0/terms?hl=en">Terms of Service.</a><br>
+                       We may email you for more information or updates. Go to <br>
+                       <a href="https://support.google.com/legal/answer/3110420?hl=en&authuser=0">Legal help</a> to ask for content changes for legal reasons
+                    </p>
+                
+           <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">CANCEL</button>
+                <button type="button" class="btn text-primary">SEND</button>
+         </div>
+  </div>
+ </div>
+</div>
+</div>
+</div>
+ </div>
+   </div>
+
+
+    <script src="./meet.js"></script>
+    
+</body>
+</html>

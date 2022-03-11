@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./meet.css">
+    <title>meeting ongoing</title>
+</head>
+<body onload="myFunction()">
+  <div class="main"> 
+    <div id="loader"></div>
+    <div id="meeting" class="animate-bottom" style="display: none;">
+      <header><button class="btn btn-primary" ><i class="fa fa-ellipsis-h"></i></button></header>
+    <div style="width:1280, height=720 "> 
+      <video id="video"  width="1280" height="720" autoplay="true"></video> 
+      <audio src="" id="audio"></audio>
+    </div>
+    <div class="down d-flex">
+    <div class="current">
+      <span id="hour"></span>
+      <span id=".">:</span>
+      <span id="minute"></span>
+      <span id=".">:</span>
+      <span id="second"></span>
+      <span>|</span>
+      <span id="link"></span>
+    </div>
+      <div class="calls">
+        <button onclick="handleMute()" id="mic" class="btn muted"><i class="fa fa-microphone"></i></button>
+        <button class="btn"><i class="fa fa-video-camera"></i></button>
+        <button class="btn"><i class="fa fa-cc"></i></button>
+        <button class="btn"><i class="fa fa-arrow-circle-up"></i></button>
+        <button class="btn"><i class="fa fa-ellipsis-v"></i></button>
+        <button onclick="handleEndCall()" class=" btn-danger drop"><i class="fa fa-phone"></i></button>
+      </div>
+      <div class="inform">
+        <button class="btn"><i class="fa fa-info-circle"></i></button>
+        <button class="btn"><i class="fa fa-users"></i></button>
+        <button class="btn"><i class="fa fa-commenting"></i></button>
+        <button class="btn"><i class="fa fa-gg-circle"></i></button>
+        <button class="btn"><i class="fa fa-shield"></i></button>
+      </div>
+    </div>
+  </div>
+   
+    </div>
+    
+</body>
+</html>
+<script>
+  // let vid = document.getElementById('video');
+  // vid.muted = false;
+
+function handleMute() {
+ // $("#video").prop('muted', true);
+
+$("#mic").click(function () {
+    if ($("#video").prop('muted')) {
+        $("#video").prop('muted', false);
+        $(this).addClass('active').append('<i class="fa fa-microphone"></i>'); // changing icon for button
+
+    } else {
+        $("#video").prop('muted', true);
+        $(this).removeClass('unmute-video').append('<i class="fa fa-microphone-slash"></i>'); // changing icon for button
+    }
+    console.log($("#video").prop('muted'))
+});
+}
+
+        function videoDisplay() {
+          let video = document.getElementById('video'),
+                vendorUrl = window.URL || window.webkitURL;
+            if (navigator.mediaDevices.getUserMedia({video: true, audio: true })) {
+                navigator.mediaDevices.getUserMedia({video: true, audio: true })
+                    .then(function (stream) {
+                        video.srcObject = stream;
+                    }).catch(function (error) {
+                        console.log("Something went wrong!");
+                    });
+            }
+        }
+        videoDisplay();
+
+//for loader
+let myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("meeting").style.display = "block";
+}
+
+//for the clock on video
+let showTime;
+let date = new Date();
+let hour = date.getHours();
+let minute = date.getMinutes();
+let second = date.getSeconds();
+
+function displayTime(params){
+        showTime = setInterval(()=>{
+            second++;
+            document.getElementById('second').innerHTML = second;
+            document.getElementById('minute').innerHTML = minute;
+            document.getElementById('hour').innerHTML = hour;
+
+        if (second == 60) {
+            document.getElementById('second').innerHTML="00";
+            second = 0;
+            minute++;
+            document.getElementById('minute').innerHTML="";
+            document.getElementById('minute').innerHTML=minute;   
+        }
+        if (minute == 60) {
+            document.getElementById('minute').innerHTML="00";
+            minute = 0;
+            hour++;
+            document.getElementById('hour').innerHTML="";
+            document.getElementById('hour').innerHTML=hour;   
+        }
+        if(hour==0){
+            document.getElementById('hour').innerHTML="12";
+        }
+        if(hour==13){
+            document.getElementById('hour').innerHTML="1";
+        }
+         },1000);
+    }
+        displayTime();
+       
+//   function handleEndCall(){
+//     let hangUpBtn = document.querySelector('hangup-btn');
+//     hangUpBtn.addEventListener('click', function (){
+//     conn.close();
+//     showCallContent();
+// })
+
+ // }
+
+</script>
