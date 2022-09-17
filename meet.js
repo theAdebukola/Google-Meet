@@ -2,7 +2,7 @@
 let date = new Date();
 let monthArray = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 let dayArray = ["Sun","Mon","Tue","Wed","Thur","Fri","Sat"];
-let currentDate = ` ${dayArray[date.getDay()]},${monthArray[date.getMonth()]}${date.getDate()}`;
+let currentDate = ` ${dayArray[date.getDay()]}, ${monthArray[date.getMonth()]} ${date.getDate()}`;
 let currentDay = `${date.getHours()} : ${date.getMinutes()} .`;
 document.getElementById('display').innerHTML = currentDate;
 document.getElementById('display2').innerHTML = currentDay;
